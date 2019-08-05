@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700&display=swap');
+
+:root {
+    --main-white: #dfe6e9;
+    --main-red: #d63031;
+    --main-green: #00b894;
+    --main-blue: #0984e3;
+    --main-yellow: #fdcb6e;
+    --main-black: #2d3436;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: ;
+}
+h1,
+h2 {
+    font-weight: 700;
+    text-align: center;
+}
+
+h1 {
+    font-size: 6rem;
+}
