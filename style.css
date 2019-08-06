@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700&display=swap');
 
 :root {
-    --main-white: #dfe6e9;
-    --main-red: #d63031;
+    --main-white: #ecf0f1;
+    --main-red: #ff6b6b;
     --main-green: #00b894;
-    --main-blue: #0984e3;
+    --main-blue: #6a89cc;
     --main-yellow: #fdcb6e;
     --main-black: #2d3436;
+    --main-grey: #8395a7;
 }
 
 * {
@@ -15,16 +16,27 @@
     box-sizing: border-box;
 }
 
+@media(max-width: 1200px){
+	font-size: 60%;
+}
+@media(max-width: 980px){
+	font-size: 58%;
+}
+@media(max-width: 460px){
+	font-size: 55%;
+}
+
+/* -- Base Style -- */
+
 html {
     font-size: 10px;
     scroll-behavior: smooth;
 }
 body {
     font-family: 'Fira Sans', sans-serif;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 400;
-    line-height: 1.5em;
-    color: ;
+    line-height: 1.5;
 }
 h1,
 h2 {
@@ -34,4 +46,165 @@ h2 {
 
 h1 {
     font-size: 6rem;
+    color: var(--main-white);
+}
+h2 {
+	font-size: 4.2rem;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: var(--main-white);
+}
+img {
+	display: block;
+	width: 100%;
+}
+
+/* -- Navigetion -- */
+
+nav {
+	display: flex;
+	justify-content: flex-end;
+	background-color: var(--main-red);
+	position: fixed;
+	width: 100%;
+}
+nav ul {
+	display: flex;
+}
+nav ul li a {
+	display: block;
+	padding: 2rem;
+	font-size: 2.2rem;
+}
+nav ul li a:hover {
+	background: var(--main-red);
+}
+@media (max-width: 460px) {
+	nav {
+		justify-content: center;
+	}
+	nav ul {
+		margin: 0 1rem;
+	}
+}
+/* -- Welcome Section -- */
+
+#welcome-section {
+	background-color: var(--main-black);
+	background-image: linear-gradient(45deg, #2f3542 0%, #57606f 100%);
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+#welcome-section > p {
+	font-size: 3rem;
+	font-style: italic;
+	color: var(--main-blue);
+}
+
+/* -- Projects Section -- */
+
+#projects {
+	text-align: center;
+	padding: 10rem 2rem;
+	background-color: var(--main-grey);
+}
+@media (max-width: 552px) {
+	#projects {
+		padding: 6rem 1rem;
+	}
+	.project-grid{
+		grid-template-columns: 1fr;
+	}
+}
+@media (max-width: 490px){
+	.project-section-header {font-size: 4rem;}
+}
+.project-section-header {
+	color: var(--main-white);
+	max-width: 640px;
+	margin: 0 auto 6rem;
+}
+.project-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	grid-gap: 4rem;
+	width: 100%;
+	max-width: 1280px;
+	margin: 0 auto 6rem;
+}
+.project {
+	background: var(--main-blue);
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+	border-radius: 6px;
+}
+.project-image {
+	height: calc(100% - 6.8rem);
+	width: 100%;
+	object-fit: cover;
+}
+.project-title {
+	font-size: 2rem;
+	padding: 2rem 0.5rem;
+}
+
+/* -- Contact Section -- */
+
+#contact {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: var(--main-black);
+	color: var(--main-white);
+	width: 100%;
+	height: 100vh;
+	padding: 0 2rem;
+}
+.contact-section-header > h2 {
+	font-size: 6rem;
+}
+@media (max-width: 460px){
+	.contact-section-header > h2 {font-size: 4rem}
+}
+.contact-section-header > p {
+	font-style: italic;
+}
+.contact-links {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+	max-width: 980px;
+	margin-top: 4rem;
+}
+.btn {
+	display: inline-block;
+	padding: 1rem 2rem;
+	border-radius: 2px;
+}
+.contact-details {
+	font-size: 2.4rem;
+	text-shadow: 2px 2px 1px #1f1f1f;
+	transition: transform 0.3s ease-out;
+}
+.contact-details:hover {
+	transform: translateY(8px);
+}
+
+/* -- Footer Section -- */
+
+footer {
+	display: flex;justify-content: flex-end;background-color: var(--main-black); border-top: 3px solid var(--main-red);color: var(--main-white); padding: 2rem;
+}
+@media (max-width: 460px) {
+	footer{flex-direction: column; text-align: center;}
 }
